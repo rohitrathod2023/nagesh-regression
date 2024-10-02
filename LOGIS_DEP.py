@@ -1,13 +1,15 @@
 import pickle as pkl
 import pandas as pd
 import numpy as np
-from sklearn.linear_model import LogisticRegression 
+#from sklearn.linear_model import LogisticRegression 
 
 
 import pickle as pkl
 # open model in read binary mode
-load = open('G__logistic_model.pkl','rb')
-model = pkl.load(load)
+# load = open('G__logistic_model.pkl','rb')
+# model = pkl.load(load)
+with open('G__logistic_model.pkl', 'rb') as file:
+    model = pkl.load(file)
 
 # DEFINE A PREDICTION FUNCTION :
 def predict(Pclass,Age,SibSp,Parch,Fare,Embarked_encoded,sex_encoded):
